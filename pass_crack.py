@@ -1,7 +1,7 @@
 import pyautogui as bot
 import time as t
 
-possible_passwords = '''Sarankumar@200222# Sarankumar#200222@ Sarankumar2002@# Sarankumar22@# Sarankumar2002@# Sarankumar222002@# Sarankumar200222@# Saran@22kumar2002# Sarankumar@2002#22 Sarankumar#22@2002 Kumarsaran@200222 Sarankumarsaran@200222 Sarankumar&2002&'''
+possible_passwords = '''Sarankumarrio22@# Sarankumarrio2002@# Sarankumar@20022 Riokumarsaran22@# Saranriokumar2002@# Saranriokumar22@# Saranriokumar222002@# Sarankumar@22 Saranriokumar@2002 Kumarsaran2002@#'''
 
 pass_list =list(possible_passwords.split(' '))
 # for i in pass_list:
@@ -15,3 +15,6 @@ for i in pass_list:
     bot.click(button='left')
     bot.hotkey('ctrl', 'a')
     bot.press('backspace')
+    print(f'{i} is not the password')
+
+print('All passwords are tried')
